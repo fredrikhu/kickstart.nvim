@@ -930,8 +930,8 @@ require('lazy').setup({
   {
     'nvim-lualine/lualine.nvim',
     opts = {
-      theme = 'tokyonight'
     }
+      theme = 'tokyonight-moon',
   },
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
