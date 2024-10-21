@@ -87,9 +87,9 @@ P.S. You can delete this when you're done too. It's your config now! :)
 vim.api.nvim_exec('language en_US', true)
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
-vim.cmd[[set softtabstop=0 noexpandtab]]
+vim.cmd [[set softtabstop=0 noexpandtab]]
 vim.opt.termguicolors = true -- enable 24 bit colors
-vim.diagnostic.config({ update_in_insert = true }) -- Updates e.g. lsp warnings when in insert mode
+vim.diagnostic.config { update_in_insert = true } -- Updates e.g. lsp warnings when in insert mode
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -955,7 +955,25 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'javascript', 'typescript', 'c_sharp', 'json', 'json5', 'zig' },
+      ensure_installed = {
+        'bash',
+        'c',
+        'diff',
+        'html',
+        'lua',
+        'luadoc',
+        'markdown',
+        'markdown_inline',
+        'query',
+        'vim',
+        'vimdoc',
+        'javascript',
+        'typescript',
+        'c_sharp',
+        'json',
+        'json5',
+        'zig',
+      },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
@@ -977,17 +995,17 @@ require('lazy').setup({
   {
     'kdheepak/lazygit.nvim',
     dependencies = {
-      "nvim-lua/plenary.nvim"
+      'nvim-lua/plenary.nvim',
     },
     config = function()
       vim.keymap.set('n', '<leader>gs', vim.cmd.LazyGit, { desc = 'Lazy[G]it [S]how' })
-    end
+    end,
   },
   {
     'nvim-lualine/lualine.nvim',
     opts = {
-    }
       theme = 'tokyonight-moon',
+    },
   },
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
