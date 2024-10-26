@@ -85,8 +85,8 @@ P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
 vim.api.nvim_exec('language en_US', true)
---vim.opt.tabstop = 4
---vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 --vim.cmd [[set softtabstop=0 noexpandtab]]
 vim.opt.termguicolors = true -- enable 24 bit colors
 vim.diagnostic.config { update_in_insert = true } -- Updates e.g. lsp warnings when in insert mode
@@ -963,6 +963,14 @@ require('lazy').setup({
   },
   {
     'tikhomirov/vim-glsl',
+  },
+  {
+    'nvim-neo-tree/neo-tree.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-tree/nvim-web-devicons',
+      'MunifTanjim/nui.nvim',
+    },
   },
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
