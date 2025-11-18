@@ -87,6 +87,7 @@ P.S. You can delete this when you're done too. It's your config now! :)
 vim.api.nvim_exec('language en_US', true)
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+vim.cmd [[set softtabstop=0 noexpandtab]]
 vim.opt.termguicolors = true -- enable 24 bit colors
 vim.diagnostic.config { update_in_insert = true } -- Updates e.g. lsp warnings when in insert mode
 
